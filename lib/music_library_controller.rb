@@ -80,8 +80,8 @@ class MusicLibraryController
   end
   
   def play_song
-    sort_by_name = Song.all.sort_by { |song| song.name }
     puts "Which song number would you like to play?"
+    sort_by_name = Song.all.sort_by { |song| song.name }
     puts list_songs
     input = gets.chomp.to_i
     if (0..Song.all.length-1).include?(input-1)
